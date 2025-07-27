@@ -10,18 +10,11 @@
       species:
         - Shadowkin
         - IPC
-    - !type:CharacterPlaytimeRequirement
-      tracker: JobWarden
-      min: 21600 #6 hrs
-    - !type:CharacterPlaytimeRequirement
-      tracker: JobDetective
-      min: 7200 #2 hrs
-    - !type:CharacterPlaytimeRequirement
-      tracker: JobSecurityOfficer
-      min: 21600 #6 hrs
+    - !type:CharacterOverallTimeRequirement
+      min: 60
     - !type:CharacterDepartmentTimeRequirement
       department: Security
-      min: 216000 # 60 hrs
+      min: 36000 # 10 hours
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -36,13 +29,13 @@
       - ZavodskoiInterstellar
       - PMCG
       - NanoTrasen
+      - EastOrionCompany
   startingGear: SeniorOfficerGear
   icon: "JobIconSeniorOfficer"
   supervisors: job-supervisors-hos
   canBeAntag: false
   access:
   - Security
-  #- Brig # Delta V: Removed
   - Maintenance
   - Service
   - External
@@ -65,10 +58,7 @@
     shoes: ClothingShoesBootsCombatFilled
     eyes: ClothingEyesGlassesSecurity
     head: ClothingHeadHatBeretSecurity
-    outerClothing: ClothingOuterArmorPlateCarrier # DeltaV - ClothingOuterArmorBasic replaced in favour of plate carrier
+    outerClothing: ClothingOuterArmorPlateCarrier
     id: SeniorOfficerPDA
     ears: ClothingHeadsetSecurity
     belt: ClothingBeltSecurityFilled
-  innerClothingSkirt: ClothingUniformJumpskirtSeniorOfficer
-  satchel: ClothingBackpackSatchelSecurity
-  duffelbag: ClothingBackpackDuffelSecurity
